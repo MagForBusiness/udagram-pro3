@@ -31,16 +31,7 @@ jobs:
           name: Front-End Deploy
           command: |
             npm run frontend:deploy
-      - eb/deploy:
-          context: aws-creds
-          environment-name: my-app
-          filters:
-            branches:
-              only:
-                - main
-          label: version-2.1
-          requires:
-            - node/test
+     
     #  - run:
     #      name: Front-End Test
     #      command: |

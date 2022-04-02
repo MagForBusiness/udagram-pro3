@@ -3,7 +3,6 @@ orbs:
   node: circleci/node@5.0.2
   aws-cli: circleci/aws-cli@2.1.0
   aws-elastic-beanstalk: circleci/aws-elastic-beanstalk@2.0.1
-build_and_test:
   jobs:
     build:
       docker:
@@ -32,8 +31,6 @@ build_and_test:
             name: Front-End Deploy
             command: |
               npm run frontend:deploy
-elastic-beanstalk-workflow:
-  jobs:
     eb-demo:
       docker:
         - image: "cimg/base:stable"
@@ -43,10 +40,10 @@ elastic-beanstalk-workflow:
 workflows:
   build_and_test:
     jobs:
-      -build
+      - build
   elastic-beanstalk-workflow:
     jobs:
-      -eb-demo
+      - eb-demo
     #  - run:
     #      name: Front-End Test
     #      command: |

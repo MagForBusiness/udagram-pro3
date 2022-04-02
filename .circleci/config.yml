@@ -26,7 +26,4 @@ jobs:
           command: |
             npm run backend:build
       
-  workflows:
-      build:
-        jobs : 
-          - build
+  

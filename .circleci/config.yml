@@ -37,21 +37,18 @@ jobs:
     steps:
       - node/install
       - checkout
-
-  workflows:
-      version: 2
-      build_and_test:
-        jobs : 
-          - build   
-      elastic-beanstalk-workflow:
-         jobs:
-         - eb-demo
+workflows:
+  build_and_test:
+    jobs:
+      - build
+    elastic-beanstalk-workflow:
+      jobs:
+        - eb-demo
     #  - run:
     #      name: Front-End Test
     #      command: |
-    #        npm run frontend:test    
-      # - run:
-      #     name: Back-End Test
-      #     command: |
-      #       npm run backend:test   
-  
+    #        npm run frontend:test
+    # - run:
+    #     name: Back-End Test
+    #     command: |
+    #       npm run backend:test

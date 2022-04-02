@@ -31,10 +31,20 @@ jobs:
           name: Front-End Deploy
           command: |
             npm run frontend:deploy
+  eb-demo:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - node/install
+
   workflows:
-      build:
+      version: 2
+      build_and_test:
         jobs : 
           - build   
+      elastic-beanstalk-workflow:
+         jobs:
+         - eb-demo
     #  - run:
     #      name: Front-End Test
     #      command: |

@@ -40,10 +40,10 @@ jobs:
 workflows:
   build_and_test:
     jobs:
-      - build
-    elastic-beanstalk-workflow:
-      jobs:
-        - eb-demo
+      -build
+  elastic-beanstalk-workflow:
+    jobs:
+      -eb-demo
     #  - run:
     #      name: Front-End Test
     #      command: |

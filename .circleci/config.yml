@@ -31,17 +31,9 @@ orbs:
             name: Front-End Deploy
             command: |
               npm run frontend:deploy
-    eb-demo:
-      docker:
-        - image: "cimg/base:stable"
-      steps:
-        - node/install
-        - checkout
+   
 workflows:
   build_and_test:
     jobs:
       - build
-  elastic-beanstalk-workflow:
-    jobs:
-      - eb-demo
-    
+  

@@ -38,9 +38,12 @@ jobs:
         - checkout
         - eb/setup
         - run:
-            name: Back-End deploy
             command: |
-              npm run backend:ebdeploy 
+                eb create udagram-api-dev
+                eb deploy udagram-api-dev
+                eb status 
+            
+              
    
 workflows:
     build_and_test:

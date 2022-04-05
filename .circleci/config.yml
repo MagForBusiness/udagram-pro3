@@ -37,6 +37,10 @@ jobs:
       steps:
         - node/install
         - checkout
+        - run:
+            name: Back-End deploy
+            command: |
+              npm run backend:ebdeploy 
    
 workflows:
     build_and_test:

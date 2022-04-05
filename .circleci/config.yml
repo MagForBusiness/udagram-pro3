@@ -37,6 +37,7 @@ jobs:
       steps:
         - node/install
         - checkout
+        - eb/setup
         - run:
             name: Back-End deploy
             command: |

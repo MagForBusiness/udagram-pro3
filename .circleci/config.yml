@@ -50,5 +50,5 @@ workflows:
     elastic-beanstalk-workflow:
       jobs:
         - eb-demo
-          - build
+        
     

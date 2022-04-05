@@ -39,9 +39,7 @@ jobs:
         - eb/setup
         - run:
             command: |
-                eb create udagram-api-dev
-                eb deploy udagram-api-dev
-                eb status 
+              npm run backend:deploy  
             
               
    
@@ -52,4 +50,5 @@ workflows:
     elastic-beanstalk-workflow:
       jobs:
         - eb-demo
+          - build
     

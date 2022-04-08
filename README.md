@@ -4,7 +4,7 @@
 
 > - For accessing the application please visit: [ClickHere](http://udagrambucet.s3-website-us-east-1.amazonaws.com)
  but please make sure you are using a browser that **doesn't enforce CORS policy** or blocking the user of the EB aws URL by the S3 URL. 
- >>>or /*
+ >>>OR /*
   For easier debugging in development mode, you can import the following file
   to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`. 
   This import should be commented out in production mode because it will have a negative impact
